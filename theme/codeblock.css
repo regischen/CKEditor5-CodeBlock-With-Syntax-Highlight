@@ -36,5 +36,14 @@
 	&[data-language]::after {
 		content: attr(data-language);
 		position: absolute;
+		top: -1px;
+    right: 10px;
+    background: #757575;
+    font-size: 10px;
+    font-family: Helvetica,Arial,Tahoma,Verdana,Sans-Serif;
+    line-height: 16px;
+    padding: 1.8px 4.8px;
+    color: #fff;
+    white-space: nowrap;
 	}
 }

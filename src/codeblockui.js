@@ -16,6 +16,7 @@ import { getNormalizedAndLocalizedLanguageDefinitions } from './utils';
 
 import codeBlockIcon from '../theme/icons/codeblock.svg';
 import '../theme/codeblock.css';
+import 'highlight.js/styles/github.css';
 
 /**
  * The code block UI plugin.
@@ -32,47 +33,47 @@ export default class CodeBlockUI extends Plugin {
 		const editor = this.editor;
 		const t = editor.t;
 		const componentFactory = editor.ui.componentFactory;
-		const normalizedLanguageDefs = getNormalizedAndLocalizedLanguageDefinitions( editor );
-		const defaultLanguageDefinition = normalizedLanguageDefs[ 0 ];
+		const normalizedLanguageDefs = getNormalizedAndLocalizedLanguageDefinitions(editor);
+		const defaultLanguageDefinition = normalizedLanguageDefs[0];
 
-		componentFactory.add( 'codeBlock', locale => {
-			const command = editor.commands.get( 'codeBlock' );
-			const dropdownView = createDropdown( locale, SplitButtonView );
+		componentFactory.add('codeBlock', locale => {
+			const command = editor.commands.get('codeBlock');
+			const dropdownView = createDropdown(locale, SplitButtonView);
 			const splitButtonView = dropdownView.buttonView;
 
-			splitButtonView.set( {
-				label: t( 'Insert code block' ),
+			splitButtonView.set({
+				label: t('Insert code block'),
 				tooltip: true,
 				icon: codeBlockIcon,
 				isToggleable: true
-			} );
+			});
 
-			splitButtonView.bind( 'isOn' ).to( command, 'value', value => !!value );
+			splitButtonView.bind('isOn').to(command, 'value', value => !!value);
 
-			splitButtonView.on( 'execute', () => {
-				editor.execute( 'codeBlock', {
+			splitButtonView.on('execute', () => {
+				editor.execute('codeBlock', {
 					language: defaultLanguageDefinition.language
-				} );
+				});
 
 				editor.editing.view.focus();
-			} );
+			});
 
-			dropdownView.on( 'execute', evt => {
-				editor.execute( 'codeBlock', {
+			dropdownView.on('execute', evt => {
+				editor.execute('codeBlock', {
 					language: evt.source._codeBlockLanguage,
 					forceValue: true
-				} );
+				});
 
 				editor.editing.view.focus();
-			} );
+			});
 
 			dropdownView.class = 'ck-code-block-dropdown';
-			dropdownView.bind( 'isEnabled' ).to( command );
+			dropdownView.bind('isEnabled').to(command);
 
-			addListToDropdown( dropdownView, this._getLanguageListItemDefinitions( normalizedLanguageDefs ) );
+			addListToDropdown(dropdownView, this._getLanguageListItemDefinitions(normalizedLanguageDefs));
 
 			return dropdownView;
-		} );
+		});
 	}
 
 	/**
@@ -83,26 +84,26 @@ export default class CodeBlockUI extends Plugin {
 	 * @param {Array.<module:code-block/codeblock~CodeBlockLanguageDefinition>} normalizedLanguageDefs
 	 * @returns {Iterable.<module:ui/dropdown/utils~ListDropdownItemDefinition>}
 	 */
-	_getLanguageListItemDefinitions( normalizedLanguageDefs ) {
+	_getLanguageListItemDefinitions(normalizedLanguageDefs) {
 		const editor = this.editor;
-		const command = editor.commands.get( 'codeBlock' );
+		const command = editor.commands.get('codeBlock');
 		const itemDefinitions = new Collection();
 
-		for ( const languageDef of normalizedLanguageDefs ) {
+		for (const languageDef of normalizedLanguageDefs) {
 			const definition = {
 				type: 'button',
-				model: new Model( {
+				model: new Model({
 					_codeBlockLanguage: languageDef.language,
 					label: languageDef.label,
 					withText: true
-				} )
+				})
 			};
 
-			definition.model.bind( 'isOn' ).to( command, 'value', value => {
+			definition.model.bind('isOn').to(command, 'value', value => {
 				return value === definition.model._codeBlockLanguage;
-			} );
+			});
 
-			itemDefinitions.add( definition );
+			itemDefinitions.add(definition);
 		}
 
 		return itemDefinitions;

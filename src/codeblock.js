@@ -6,11 +6,9 @@
 /**
  * @module code-block/codeblock
  */
-
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import CodeBlockEditing from './codeblockediting';
 import CodeBlockUI from './codeblockui';
-import Span from '../../span/span'
 import Syntax from './syntax'
 
 /**

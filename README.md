@@ -1,11 +1,10 @@
-CKEditor 5 code block feature
-========================================
+# CKEditor 5 code block feature
 
-[![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-code-block.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-code-block)
-[![Dependency Status](https://david-dm.org/ckeditor/ckeditor5-code-block/status.svg)](https://david-dm.org/ckeditor/ckeditor5-code-block)
-[![devDependency Status](https://david-dm.org/ckeditor/ckeditor5-code-block/dev-status.svg)](https://david-dm.org/ckeditor/ckeditor5-code-block?type=dev)
+This package implements real-time syntax highlight basesd on the code block feature of CKEditor 5 and third party libary Highlight.js
 
-This package implements the code block feature for CKEditor 5.
+![Effect](./assets/show.gif)
+
+## Usage
 
 ## Documentation
 
