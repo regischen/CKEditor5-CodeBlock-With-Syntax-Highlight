@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-codeblock-with-syntax-highlight",
-  "version": "24.0.0",
+  "version": "1.0.0",
   "description": "Code Block feature for CKEditor 5.",
   "keywords": [
     "ckeditor",
