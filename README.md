@@ -1,4 +1,4 @@
-# CKEditor 5 code block feature
+# CKEditor 5 code block with real-time syntax highlight
 
 This package implements real-time syntax highlight basesd on the code block feature of CKEditor 5 and third party libary Highlight.js
 
@@ -12,8 +12,8 @@ npm i ckeditor5-codeblock-with-syntax-highlight
 
 ```
 import CodeBlock from 'ckeditor5-codeblock-with-syntax-highlight/src/codeblock'
-(Note: comment original import e.g.
-// import CodeBlock from '../plugins/ckeditor5-code-block/src/codeblock')
+(Note: comment original import )e.g.
+// import CodeBlock from '@ckeditor5/ckeditor5-code-block/src/codeblock'
 ```
 
 ```
@@ -27,7 +27,7 @@ toolbar: [..., 'codeBlock']
 **If you find value in this package, please consider give a star.
 So I will be more motivated to improve this package.**
 
-Any suggestions and issues are welcome!
+**Any suggestions and issues are welcome!**
 
 ## License
 
