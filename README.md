@@ -2,7 +2,7 @@
 
 This package implements real-time syntax highlight basesd on the code block feature of CKEditor 5 and third party libary Highlight.js
 
-![Effect](./assets/show.gif)
+![Effect](https://raw.githubusercontent.com/regischen/CKEditor5-CodeBlock-With-Syntax-Highlight/main/assets/show.gif)
 
 ## Usage
 
