@@ -7,12 +7,12 @@ This package implements real-time syntax highlight basesd on the code block feat
 ## Usage
 
 ```
-npm i ckeditor5-codeblock-with-syntax-highlight
+npm i ckeditor5-codeblock-with-syntax-highlight --save
 ```
 
 ```
 import CodeBlock from 'ckeditor5-codeblock-with-syntax-highlight/src/codeblock'
-(Note: comment original import )e.g.
+(Note: comment original import.)
 // import CodeBlock from '@ckeditor5/ckeditor5-code-block/src/codeblock'
 ```
 
