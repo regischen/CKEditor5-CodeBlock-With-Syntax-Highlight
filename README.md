@@ -6,9 +6,28 @@ This package implements real-time syntax highlight basesd on the code block feat
 
 ## Usage
 
-## Documentation
+```
+npm i ckeditor5-codeblock-with-syntax-highlight
+```
 
-See the [`@ckeditor/ckeditor5-code-block` package](https://ckeditor.com/docs/ckeditor5/latest/api/code-block.html) page as well as the [Code block feature guide](https://ckeditor.com/docs/ckeditor5/latest/features/code-blocks.html) in [CKEditor 5 documentation](https://ckeditor.com/docs/ckeditor5/latest/).
+```
+import CodeBlock from 'ckeditor5-codeblock-with-syntax-highlight/src/codeblock'
+(Note: comment original import e.g.
+// import CodeBlock from '../plugins/ckeditor5-code-block/src/codeblock')
+```
+
+```
+plugins: [..., CodeBlock]
+```
+
+```
+toolbar: [..., 'codeBlock']
+```
+
+**If you find value in this package, please consider give a star.
+So I will be more motivated to improve this package.**
+
+Any suggestions and issues are welcome!
 
 ## License
 
