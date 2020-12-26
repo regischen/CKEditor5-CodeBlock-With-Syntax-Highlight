@@ -36,6 +36,11 @@
   },
   "author": "regis (http://cksource.com/)",
   "license": "GPL-2.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/regischen/CKEditor5-CodeBlock-With-Syntax-Highlight.git",
+    "directory": "packages/ckeditor5-code-block"
+  },
   "files": [
     "lang",
     "src",
